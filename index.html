@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="facebook-domain-verification" content="COLE_SEU_CODIGO_AQUI">
+<title>Empresa</title>
+<style>
+body { font-family: Arial; margin:0; background:#0f172a; color:#fff; }
+header { padding:40px; text-align:center; background:#020617; }
+section { padding:30px; max-width:900px; margin:auto; }
+.card { background:#111827; padding:20px; border-radius:10px; margin-bottom:20px; }
+a { color:#60a5fa; }
+.button { background:#2563eb; padding:10px 15px; border-radius:6px; color:#fff; text-decoration:none; }
+</style>
+<script>
+const config = {
+  empresa: "NOME DA EMPRESA",
+  descricao: "Soluções digitais",
+  cnpj: "00.000.000/0001-00",
+  email: "contato@email.com",
+  telefone: "(00) 00000-0000",
+  whatsapp: "5500000000000"
+};
+</script>
+</head>
+<body>
+<header>
+<h1 id="empresa"></h1>
+<p id="descricao"></p>
+</header>
+<section>
+<div class="card">
+<h2>Sobre</h2>
+<p><strong>CNPJ:</strong> <span id="cnpj"></span></p>
+</div>
+<div class="card">
+<h2>Contato</h2>
+<p>Email: <span id="email"></span></p>
+<p>Telefone: <span id="telefone"></span></p>
+<a id="whatsapp" class="button" target="_blank">WhatsApp</a>
+</div>
+<div class="card">
+<p><a href="privacidade.html">Política de Privacidade</a></p>
+<p><a href="termos.html">Termos de Uso</a></p>
+</div>
+</section>
+<script>
+document.getElementById("empresa").innerText = config.empresa;
+document.getElementById("descricao").innerText = config.descricao;
+document.getElementById("cnpj").innerText = config.cnpj;
+document.getElementById("email").innerText = config.email;
+document.getElementById("telefone").innerText = config.telefone;
+document.getElementById("whatsapp").href = "https://wa.me/" + config.whatsapp;
+</script>
+</body>
+</html>
